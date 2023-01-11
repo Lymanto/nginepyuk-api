@@ -1,0 +1,16 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^read$ read.php [NC,L]
+RewriteRule ^read/([0-9_-]*)$ read.php?id=$1 [NC,L]
+RewriteRule ^create$ create.php [NC,L]
+RewriteRule ^update$ update.php [NC,L]
+RewriteRule ^delete$ delete.php [NC,L]
+RewriteRule ^uploadHotelImages$ uploadHotelImages.php [NC,L]
+RewriteRule ^addRoom$ addRoom.php [NC,L]
+RewriteRule ^addCategory$ addCategory.php [NC,L]
+RewriteRule ^recommended$ getRecommended.php [NC,L]
+RewriteRule ^detail$ detail.php [NC,L]
+RewriteRule ^findRoomBy$ findRoomBy.php [NC,L]
+RewriteRule ^search$ search.php [NC,L]
+
+RewriteCond %{HTTP:Authorization} ^(.+)$
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

@@ -1,0 +1,3 @@
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule ^BookingInformationTest$ BookingInformationTest.php [NC,L]
+RewriteRule ^PaymentTest$ PaymentTest.php [NC,L]
